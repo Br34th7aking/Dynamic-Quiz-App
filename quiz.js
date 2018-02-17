@@ -120,7 +120,7 @@ nextButton.addEventListener('click', () => {
 
 			// remove the buttons.
 			nextButton.style.display = 'none';
-			nextButton.style.display = 'none';
+			checkButton.style.display = 'none';
 
 			// display final message.
 			message.textContent = "Great work! Refresh the page if you want to take the quiz again.";
