@@ -10,7 +10,54 @@ const questions = [
 		correct: "2"
 
 	},
-	
+	{
+		question: "If you try to pop an element from an empty stack, which of the following will occur?",
+		choices:["Overflow", "Underflow", "No Error", "Value of top will be printed"],
+		correct:"1"
+
+	},
+	{
+		question: "What is the time complexity of a stack push operation implemented using an array?",
+		choices:["O(n)", "O(n x n),", "O(1)", "O(sqrt(n))"],
+		correct:"2"
+
+	},
+	{
+		question: "Which of the following is the correct syntax for the STL stack?",
+		choices:["int v = S.pop();", "x = S.push();", "S.push(x);", "push(S, x);"],
+		correct:"2"
+
+	},
+	{
+		question: "What is the full-form of STL?" ,
+		choices:["Simple Template Library", "Selector Type Library", "Standard Type Library", "Standard Template Library"],
+		correct: "3"
+
+	},
+	{
+		question: "If algorithm X has O(N x N) time complexity, and algorithm Y has O(N) time complexity, then Y is better than X for",
+		choices:["no inputs", "all inputs", "large inputs", "small inputs"],
+		correct: "2"
+
+	},
+	{
+		question: "A stack is a/an ______________.",
+		choices:["data structure", "algorithm", "variable", "none of these"],
+		correct: "0"
+
+	},
+	{
+		question: "stack <int> s: What does this mean?",
+		choices:["int is a stack", "s is an integer", "s is a stack that can contain integers", "none of these"],
+		correct: "2"
+
+	},
+	{
+		question: "Which of the following is not a predefined operation for an STL stack?",
+		choices:["push()", "pop()", "clear()", "empty()"],
+		correct: "2"
+
+	},
 
 
 ];
@@ -19,6 +66,8 @@ const main = document.querySelector('.main');
 
 const nextButton = document.querySelector('.nextButton');
 const checkButton = document.createElement('button');
+
+const response = document.querySelector('.response');
 
 
 let p = document.createElement('p');
@@ -59,6 +108,23 @@ nextButton.addEventListener('click', () => {
 
 		counter++;
 
+		// for last question: clear the board. add a final message. 
+		if (counter >= questions.length) {
+			// remove the questions area
+			main.removeChild(p);
+			main.removeChild(optionA);
+			main.removeChild(optionB);
+			main.removeChild(optionC);
+			main.removeChild(optionD);
+
+			// remove the buttons.
+			nextButton.style.display = 'none';
+			nextButton.style.display = 'none';
+
+			// display final message.
+			message.textContent = "Great work! Refresh the page if you want to take the quiz again.";
+		}
+
 	}
 	
 
@@ -69,7 +135,7 @@ checkButton.addEventListener('click', () => {
 
 	let selected = 'input[name="question' + (counter-1) + '"]:checked';
 	
-	main.appendChild(message);
+	response.appendChild(message);
 	let userChoice = main.querySelector(selected || {}).value;
 	//console.log(userChoice);
 
