@@ -67,6 +67,7 @@ const main = document.querySelector('.main');
 const nextButton = document.querySelector('.nextButton');
 const checkButton = document.createElement('button');
 
+
 const response = document.querySelector('.response');
 
 
@@ -102,7 +103,7 @@ nextButton.addEventListener('click', () => {
 		if (!counter) {
 			
 			checkButton.textContent = "Check";
-			checkButton.className = 'check';
+			checkButton.className = 'checkButton';
 			main.appendChild(checkButton);
 		}
 
@@ -123,6 +124,7 @@ nextButton.addEventListener('click', () => {
 
 			// display final message.
 			message.textContent = "Great work! Refresh the page if you want to take the quiz again.";
+			message.style.color = "blue";
 		}
 
 	}
@@ -143,7 +145,7 @@ checkButton.addEventListener('click', () => {
 	if (userChoice === questions[counter-1].correct) {
 		
 		message.textContent = "Well done! That is correct!";
-		message.style.color = "lightgreen";
+		message.style.color = "green";
 
 	} else {
 		message.textContent = "Sorry! You got it wrong this time.";

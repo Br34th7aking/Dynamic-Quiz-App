@@ -1,0 +1,45 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	background: #eee;
+	font-family: sans-serif;
+	font-size: 1.2em;
+
+}
+
+h1 {
+	width: 70%;
+	margin: 0 auto;
+	color: purple;
+	border-bottom: 3px dotted #555;
+	text-align: center;
+}
+
+button {
+
+	background: skyblue;
+	color: white;
+	text-decoration: none;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	width: 8%;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.checkButton {
+	margin-left: 0;
+}
+.main {
+	width: 70%;
+	margin: 0 auto;
+
+}
+.response {
+	text-align: center;
+	width: 70%;
+	margin: 0 auto;
+}
